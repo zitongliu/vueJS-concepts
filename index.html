@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div id="app">
-    <p>{{name}}</p>
+    <p v-bind:class="{updated: name !== 'Max' }">{{name}}</p>
     <p v-if="name !== 'Max'">Name updated!</p>
     <button v-on:click="changeName">Change Name</button>
     <button v-on:click="addElement">New Element</button>
     <ul>
-      <li v-for="el in elements">Element {{ el }}</li>
+      <li v-for="element in elements"
+          v-bind:id="'el' + element"
+          v-bind:style="{backgroundColor: getColor(element)}" >Element {{ element }}</li>
     </ul>
   </div>
 
