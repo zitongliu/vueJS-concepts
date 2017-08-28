@@ -8,6 +8,16 @@
 </head>
 <body>
 
+  <div id="app">
+    <p>{{name}}</p>
+    <p v-if="name !== 'Max'">Name updated!</p>
+    <button v-on:click="changeName">Change Name</button>
+    <button v-on:click="addElement">New Element</button>
+    <ul>
+      <li v-for="el in elements">Element {{ el }}</li>
+    </ul>
+  </div>
+
 
   <script src="https://unpkg.com/vue"></script>
   <script src="main.js"></script>
