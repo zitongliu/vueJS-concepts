@@ -10,6 +10,8 @@
 <body>
 
   <div id="app">
+    <app-username></app-username>
+    <app-username></app-username>
     <p v-bind:class="{updated: name !== 'Max' }">{{name}}</p>
     <p v-if="name !== 'Max'">Name updated!</p>
     <button v-on:click="changeName">Change Name</button>
@@ -22,6 +24,7 @@
   </div>
 
   <div id="app2">Second Vue Instance</div>
+
 
 
   <script src="https://unpkg.com/vue"></script>
