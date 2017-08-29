@@ -16,3 +16,11 @@ new Vue({
     }
   }
 })
+
+
+new Vuew({
+  el: '#app2',
+  data: {
+    message: 'Hello there'
+  }
+})
